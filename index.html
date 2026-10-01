@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Birthday Gift 🎁</title>
+
+  <style>
+    body {
+      margin: 0;
+      height: 100vh;
+      background: #f8f8f8;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-family: Arial, sans-serif;
+      overflow: hidden;
+    }
+
+    .box {
+      width: 180px;
+      height: 140px;
+      background: white;
+      border: 2px solid #ddd;
+      border-radius: 10px;
+      position: relative;
+      cursor: pointer;
+      box-shadow: 0 8px 25px rgba(0,0,0,0.12);
+      transition: 1s;
+    }
+
+    .ribbon {
+      position: absolute;
+      width: 25px;
+      height: 100%;
+      background: #e91e63;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+
+    .lid {
+      position: absolute;
+      width: 200px;
+      height: 35px;
+      background: white;
+      border: 2px solid #ddd;
+      border-radius: 8px;
+      top: -25px;
+      left: -12px;
+      transition: 1s;
+      z-index: 2;
+    }
+
+    .message {
+      display: none;
+      text-align: center;
+      max-width: 500px;
+      padding: 25px;
+      animation: fade 1.5s ease;
+    }
+
+    .message h1 {
+      font-size: 28px;
+      margin-bottom: 15px;
+    }
+
+    .message p {
+      font-size: 18px;
+      line-height: 1.7;
+    }
+
+    .cup {
+      font-size: 55px;
+    }
+
+    .gb {
+      margin-top: 25px;
+      font-weight: bold;
+      font-size: 20px;
+    }
+
+    @keyframes fade {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="box" id="gift" onclick="openGift()">
+    <div class="lid" id="lid"></div>
+    <div class="ribbon"></div>
+  </div>
+
+  <div class="message" id="message">
+    <div class="cup">🏆</div>
+
+    <h1>Happy Birthday 🎂❤️</h1>
+
+    <p>
+      This moment may be a memory,<br>
+      but your smile should never be. 😊<br><br>
+
+      Andha Kabaddi win-a nee eppavum marakka maata nu sonna...
+      <br>
+      So, indha small gift just to remind you of that smile. ❤️
+      <br><br>
+
+      <b>Always keep smiling & stay happy! ✨</b>
+    </p>
+
+    <div class="gb">GB TC ❤️</div>
+  </div>
+
+  <script>
+    function openGift() {
+      document.getElementById("gift").style.display = "none";
+      document.getElementById("message").style.display = "block";
+    }
+  </script>
+
+</body>
+</html>
